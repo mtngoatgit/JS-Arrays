@@ -76,29 +76,31 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
 
 
   //Code Here
-function oddFinder(numbs) {
+function oddFinders(nums) {
   var arr1 = [];
   for(var i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 === 0) {
+    if (nums[i] % 2 !== 0) {
       arr1.push(nums[i]);
     }
   }
   return arr1;
 }
-function evenFinder(nums) {
+function evenFinders(nums) {
+  var arr = [];
   for(var i = 0; i < nums.length; i++) {
-    if (nums[i] % 2 !== 0) {
-      nums.splice(i, 1);
+    if (nums[i] % 2 === 0) {
+      arr1.push(nums[i]);
     }
   }
-  return nums;
+  return arr;
 }
 
 function divider(numbersArray) {
   var sum = [];
-  var arrA = evenFinder(numbersArray);
-  var arrB = oddFinder(numbersArray);
-  sum.push(arrA, arrB);
+  var arrA = evenFinders(numbersArray);
+  var arrB = oddFinders(numbersArray);
+  sum.push(arrA,arrB);
+  console.log(sum);
   return sum;
 }
 
